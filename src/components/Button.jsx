@@ -1,30 +1,9 @@
-import PocketBase from 'pocketbase';
-import React, { useEffect, useState } from 'react';
-
-const pb = new PocketBase('https://pfpf.pockethost.io');
+import React from 'react';
 
 function Button() {
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    async function getProductsImage() {
-      try {
-        const readProduct = await pb.collection('test').getFullList();
-
-        setData(readProduct);
-        console.log(readProduct);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    getProductsImage();
-  }, []);
-
   return (
     <>
       <button type='button'>버튼</button>
-      <button type='button'>{data.length}</button>
     </>
   );
 }
