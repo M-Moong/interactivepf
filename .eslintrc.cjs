@@ -9,7 +9,7 @@ module.exports = {
       env: {
         node: true,
       },
-      files: ['.eslintrc.{js,cjs}'],
+      files: ['.eslintrc.{js,cjs,jsx}'],
       parserOptions: {
         sourceType: 'script',
       },
@@ -20,5 +20,12 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: {},
+  rules: {
+    // 'react-hooks/exhaustive-deps': [
+    //   'warn',
+    //   {
+    //     addionalHooks: 'useRecoilCallback',
+    //   },
+    // ],
+  },
 };
